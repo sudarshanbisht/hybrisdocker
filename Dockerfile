@@ -1,5 +1,5 @@
-FROM hybrisdummy:1.0
-MAINTAINER Stefan Lehmann <stefan.lehmann@unic.com>
+FROM sudarshanbisht/hybrispoc:1.0
+MAINTAINER Sudarshan Bisht <sbisht4@sapient.com>
 
 ENV VERSION 8
 ENV UPDATE 121
