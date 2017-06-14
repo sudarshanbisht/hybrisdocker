@@ -1,0 +1,26 @@
+# B2C Accelerator Compose
+
+version: '2'
+
+services:
+
+  hsql:
+    image: b2cacc_deployment_hsql
+    volumes:
+      - ./state/hsql:/opt/hsqldb/data
+
+  solr:
+    image: b2cacc_deployment_solr
+    command: default
+    volumes:
+      - ./state/solr:/opt/solr/server/solr/cores
+
+  platform:
+    image: hybrispoc:1.0
+    volumes:
+      - /app/latest-hybris/hybris/temp/hybris/hybrisServer:/home/hybris
+      - ./state/media:/app/hybris/data/media
+      - ./state/hsql:/app/hybris/data/hsqldb
+    ports:
+      - "9001:9001"
+      - "9002:9002"
