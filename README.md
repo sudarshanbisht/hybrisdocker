@@ -77,7 +77,7 @@ Please be aware that this only happens on first start of the container, so when 
 
 1. Create a new image named as hybrisfull using the docker file.
 
-	#docker build -t hybrispoc:1.0 
+	#docker build -t hybrispoc:1.0 . 
 
 2. Use the image to start the hybris platfrom using the docker-compose.yaml file. Please make sure that you are running thebbelow command from the same location where this docker-compose.yaml file is kept.
 
